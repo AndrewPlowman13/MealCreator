@@ -2,11 +2,13 @@ from MealSearch import search
 from tkinter import *
 
 # List to hold ingredient variables
-ingredient_variables = ["Broccoli", "Onion", "Potato"]
+ingredient_variables = ["Broccoli", "Onion", "Potato", "Rice", "Rice Noodles", "Chickpeas", "English Peas",
+                        "Vegitable Medley", "Tofu", "Tomato Sauce"]
 # List to hold user choices
 choices = []
 
 
+# Function to get String value from list selection
 def selected_ingredient(ingredient):
     if ingredient == 0:
         return "Broccoli"
@@ -14,8 +16,23 @@ def selected_ingredient(ingredient):
         return "Onion"
     elif ingredient == 2:
         return "Potato"
+    elif ingredient == 3:
+        return "Rice"
+    elif ingredient == 4:
+        return "Rice Noodles"
+    elif ingredient == 5:
+        return "Chickpeas"
+    elif ingredient == 6:
+        return "English Peas"
+    elif ingredient == 7:
+        return "Vegitable Medley"
+    elif ingredient == 8:
+        return "Tofu"
+    elif ingredient == 9:
+        return "Tomato Sauce"
 
 
+# Function to append list selections to choices list and to call Search function from MealSearch
 def items_selected(event):
     selected_items = selection_list.curselection()
     for item in selected_items:
@@ -39,6 +56,7 @@ selection_list.pack(expand=YES, fill="both")
 for i in range(len(ingredient_variables)):
     selection_list.insert(END, ingredient_variables[i])
 
+# Bind the list selection to the function items_selected
 selection_list.bind('<<ListboxSelect>>', items_selected)
 
 recipe_display = Text(root, width=38, font=('Arial', 14))

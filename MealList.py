@@ -6,7 +6,7 @@ meals = [
          "Potato"
      ]
      ),
-    ("Broccoli,onions and potato stir fry",
+    ("Broccoli, onions and potato stir fry",
      [
          "Broccoli",
          "Onion",
@@ -18,5 +18,35 @@ meals = [
          "Broccoli",
          "Onion"
      ]
+     ),
+    ("Tofu and noodle stir fry",
+     [
+         "Rice Noodles",
+         "Tofu",
+         "Vegitable Medley"
+     ]
+     ),
+    ("Gluten-free spaghetti",
+     [
+         "Rice Noodles",
+         "Tomato Sauce",
+         "Chickpeas"
+     ]
+     ),
+    ("Vegan fried rice",
+     [
+         "Rice",
+         "Vegitable Medley",
+         "English Peas"
+     ]
+     ),
+    ("Vegan fried rice with tofu",
+     [
+         "Rice",
+         "Vegitable Medley",
+         "English Peas",
+         "Tofu"
+     ]
      )
+
 ]
