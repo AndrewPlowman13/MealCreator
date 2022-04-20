@@ -8,35 +8,11 @@ ingredient_variables = ["Broccoli", "Onion", "Potato", "Rice", "Rice Noodles", "
 choices = []
 
 
-# Function to get String value from list selection
-def selected_ingredient(ingredient):
-    if ingredient == 0:
-        return "Broccoli"
-    elif ingredient == 1:
-        return "Onion"
-    elif ingredient == 2:
-        return "Potato"
-    elif ingredient == 3:
-        return "Rice"
-    elif ingredient == 4:
-        return "Rice Noodles"
-    elif ingredient == 5:
-        return "Chickpeas"
-    elif ingredient == 6:
-        return "English Peas"
-    elif ingredient == 7:
-        return "Vegitable Medley"
-    elif ingredient == 8:
-        return "Tofu"
-    elif ingredient == 9:
-        return "Tomato Sauce"
-
-
 # Function to append list selections to choices list and to call Search function from MealSearch
 def items_selected(event):
     selected_items = selection_list.curselection()
     for item in selected_items:
-        choices.append(selected_ingredient(item))
+        choices.append(item)
     recipe_display.delete(1.0, END)
     for recipe in search(choices):
         recipe_display.insert(END, recipe + "\n")
