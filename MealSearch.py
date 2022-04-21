@@ -1,5 +1,6 @@
 from MealList import meals
 
+# convert int input from list to string
 def convert_ingredient(ingredient):
     if ingredient == 0:
         return "Broccoli"
@@ -22,12 +23,12 @@ def convert_ingredient(ingredient):
     elif ingredient == 9:
         return "Tomato Sauce"
 
-
+# Function to search MealList and return meals that use the ingredients currently selected
 def search(ingredients):
-    # Create list to store meals that can be cooked with current selection
     converted_ingredients = []
     can_cook = []
 
+    # Call function on each list element and store string for searching MealList
     for i in ingredients:
         converted_ingredients.append(convert_ingredient(i))
 

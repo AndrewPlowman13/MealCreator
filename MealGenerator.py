@@ -8,7 +8,8 @@ ingredient_variables = ["Broccoli", "Onion", "Potato", "Rice", "Rice Noodles", "
 choices = []
 
 
-# Function to append list selections to choices list and to call Search function from MealSearch
+# Function to append list selections to choices list, to call Search function from MealSearch
+# and display recipes in list box
 def items_selected(event):
     selected_items = selection_list.curselection()
     for item in selected_items:
@@ -35,6 +36,7 @@ for i in range(len(ingredient_variables)):
 # Bind the list selection to the function items_selected
 selection_list.bind('<<ListboxSelect>>', items_selected)
 
+# Create text box to show recipes
 recipe_display = Text(root, width=38, font=('Arial', 14))
 recipe_display.pack()
 
